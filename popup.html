@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WiFi Auto Login</title>
+  <script src="popup.js"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	outline: none;
+	font-family: 'Open Sans', sans-serif;
+}
+
+body{
+	background: #f3f6f9;
+}
+
+.checkbox_item{
+  margin: 10vh;
+}
+
+.checkbox_item .title{
+	padding-bottom: 15px;
+	border-bottom: 1px solid #7a7a7a;
+	font-size: 20px;
+	font-weight: bold;
+	letter-spacing: 3px;
+	margin-bottom: 25px;
+	text-align: center;
+}
+
+.checkbox_item .checkbox_wrap{
+	position: relative;
+	display: block;
+	cursor: pointer;
+	width: 100px;
+	margin: 0 auto 50px;
+}
+
+.checkbox_item:last-child .checkbox_wrap{
+	margin-bottom: 0;
+}
+
+.checkbox_item .checkbox_wrap .checkbox_inp{
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	z-index: 1;
+}
+
+.checkbox_item .checkbox_wrap .checkbox_mark{
+	display: inline-block;
+	position: relative;
+	border-radius: 25px;
+}
+
+.checkbox_item .checkbox_wrap .checkbox_mark:before,
+.checkbox_item .checkbox_wrap .checkbox_mark:after{
+	content: "";
+	position: absolute;
+	transition: all 0.5s ease;
+}
+
+/* flat styles */
+.checkbox_item.citem_2 .checkbox_wrap .checkbox_mark{
+	border: 5px solid #7a7a7a;
+	width: 100px;
+	height: 50px;
+	padding: 2px;
+}
+
+.checkbox_item.citem_2 .checkbox_wrap .checkbox_mark:before{
+	top: 2px;
+    left: 2px;
+    width: 44px;
+    height: 36px;
+    background: #7a7a7a;
+    border-radius: 25px;
+}
+
+.checkbox_item.citem_2 .checkbox_wrap .checkbox_inp:checked ~ .checkbox_mark{
+	border-color: #34bfa3;
+}
+
+.checkbox_item.citem_2 .checkbox_wrap .checkbox_inp:checked ~ .checkbox_mark:before{
+	left: 44px;
+	background: #34bfa3;
+}
+
+  </style>
+</head>
+<body>
+  <div class="checkbox_item citem_2">
+		<!-- <div class="title">Run Extension</div> -->
+    <p class="title" id="extensionTitle">Stop Extension</p>
+		<label class="checkbox_wrap">
+			<input type="checkbox" name="checkbox" class="checkbox_inp" id="extensionCheckbox" checked>
+			<span class="checkbox_mark"></span>
+		</label>
+	</div>
+</body>
+</html>
