@@ -45,7 +45,7 @@ To use the lpu_wifi_auto_login extension, follow these steps:
 
 2. Login with your username and password in the respective fields for the first time to save credentials in local storage.
 
-3. Click the "Login Fast" button that appears on the page (usually near the login form).
+3. Click the "Login Fast" button that appears on the page (usually near the login form). It will Login with last login details.
 
 4. The extension will automatically fill in your login credentials.
 
