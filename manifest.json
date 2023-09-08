@@ -9,7 +9,8 @@
     "content_scripts": [
       {
         "matches": ["https://10.10.0.1/*", "https://internet.lpu.in/*"],
-        "js": ["content.js"]
+        "js": ["content.js"],
+        "css": ["banner.css"]
       }
     ],
     "action": {
